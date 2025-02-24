@@ -60,7 +60,7 @@ distances = {
     'BW': 15, 'BA': 8
 }
 demands = {
-    'A': 7,
+    'A': 5,
     'B': 3
 }
 capacities = {
