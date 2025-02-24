@@ -22,8 +22,8 @@ This project implements a vehicle routing optimization system that handles multi
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/courier-optimization.git
-cd courier-optimization
+git clone https://github.com/Neelshah1810/Optimizing-Delivery-Routes-for-Courier-Company-Using-LPP.git
+cd Optimizing-Delivery-Routes-for-Courier-Company-Using-LPP
 ```
 
 2. Install required packages:
