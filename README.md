@@ -35,7 +35,7 @@ pip install -r requirements.txt
 
 1. Run the Streamlit app:
 ```bash
-streamlit run app.py
+streamlit run Optimizing_Delivery_Routes.py
 ```
 
 2. Input your parameters in the web interface:
@@ -110,18 +110,11 @@ The program outputs:
 3. Total distance traveled
 4. Solution status
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Authors
-
-- Your Name
-- Your Email/Contact Information
 
 ## Acknowledgments
 
@@ -129,12 +122,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - PuLP for the Linear Programming solver
 - Any other acknowledgments you'd like to add
 
-## Contact
-
-For any queries regarding this project, please contact:
-- Email: your.email@example.com
-- LinkedIn: your-linkedin-profile
-- GitHub: your-github-profile
-
----
-Don't forget to replace placeholders (yourusername, your.email@example.com, etc.) with your actual information.
