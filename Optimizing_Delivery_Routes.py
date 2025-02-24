@@ -188,4 +188,4 @@ if st.button("Optimize"):
         # Display status
         st.subheader(f"Status: {result['status']}")
     else:
-        st.error("No feasible solution found!")
+        st.error("No feasible solution found! Try with adjusting the demand or vehicle capacity")
