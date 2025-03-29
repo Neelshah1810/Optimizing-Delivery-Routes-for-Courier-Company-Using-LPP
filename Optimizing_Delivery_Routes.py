@@ -10,7 +10,7 @@ def courier_optimization(num_vehicles, num_locations, distances, demands, capaci
     x = {f'x{v}_{i}{j}': LpVariable(f'x{v}_{i}{j}', cat='Binary') 
          for v in range(num_vehicles) for i in locations for j in locations if i != j}
     
-    # Modified: Delivery amount variables (continuous) for each vehicle to each location
+    # Delivery amount variables (continuous) for each vehicle to each location
     d = {f'd{v}_{j}': LpVariable(f'd{v}_{j}', lowBound=0, upBound=demands[j]) 
          for v in range(num_vehicles) for j in locations[1:]}
     
@@ -37,7 +37,7 @@ def courier_optimization(num_vehicles, num_locations, distances, demands, capaci
             prob += (lpSum(x[f'x{v}_{i}{k}'] for i in locations if i != k) ==
                     lpSum(x[f'x{v}_{k}{j}'] for j in locations if j != k))
     
-    # Modified: Location visit constraints
+    # Location visit constraints
     # Link y variables with x variables - if a vehicle delivers anything, it must visit
     for v in range(num_vehicles):
         for j in locations[1:]:
@@ -46,7 +46,7 @@ def courier_optimization(num_vehicles, num_locations, distances, demands, capaci
             # If there's a visit (x = 1 for any incoming edge), y must be 1
             prob += lpSum(x[f'x{v}_{i}{j}'] for i in locations if i != j) == y[f'y{v}_{j}']
     
-    # Modified: Demand satisfaction constraints
+    # Demand satisfaction constraints
     # Total delivery to each location must equal its demand
     for j in locations[1:]:
         prob += lpSum(d[f'd{v}_{j}'] for v in range(num_vehicles)) == demands[j]
